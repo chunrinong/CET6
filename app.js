@@ -1,5 +1,12 @@
 const week = window.CET6_WEEK;
 const $ = (s) => document.querySelector(s);
+if (!week || !Array.isArray(week.days) || !window.CET6_AUDIO) {
+  document.addEventListener('DOMContentLoaded', () => {
+    const target = document.querySelector('#sentences');
+    if (target) target.innerHTML = '<p class="load-error">学习内容暂时没有加载出来。请刷新页面，或检查网络连接后重试。</p>';
+  });
+  throw new Error('CET-6 data scripts failed to load');
+}
 const chosen = new URLSearchParams(location.search).get('day');
 let active = Math.max(0, Math.min(6, Number(chosen || 1) - 1));
 function render() {
