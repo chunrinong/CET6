@@ -13,11 +13,17 @@
   <header class="top"><a class="brand" href="#"><span>句间</span><small>WORDS IN CONTEXT</small></a><div class="top-right"><span class="streak">✦ 每天五句，积累成章</span><button id="refresh" class="icon" aria-label="重新载入今日内容">↻</button></div></header>
   <main>
     <section class="intro"><div class="overline"><span class="dot"></span> CET-6 WRITING STUDIO <span id="today"></span></div><h1>让表达，<em>更进一步。</em></h1><p>精选适用于六级作文的中文论述句，练习转化为自然、有层次的英文表达。</p></section>
-    <section class="topic-card"><div class="topic-mark">01 <span>—</span></div><div class="topic-info"><div class="tag" id="topicTag">本期主题</div><h2 id="topic">数字时代与人工智能</h2><p id="topicNote">连续三天积累同一话题，建立可迁移的表达素材。</p></div><div class="topic-progress"><span>主题周期</span><strong id="cycle">第 1 / 3 天</strong><div class="progress"><i id="progress"></i></div></div></section>
-    <div class="section-head"><div><span class="label">TODAY'S SENTENCES</span><h2>今日五句</h2></div><span class="hint">点击卡片，查看英文译文与重点词汇</span></div>
+    <div class="week-nav" id="weekNav" aria-label="选择学习日期"></div>
+    <section class="topic-card"><div class="topic-mark" id="topicIndex">01 <span>—</span></div><div class="topic-info"><div class="tag">今日话题</div><h2 id="topic">数字时代与人工智能</h2><p id="topicNote">每日五句，按话题积累六级写作素材。</p></div><div class="topic-progress"><span>本周进度</span><strong id="cycle">第 1 / 7 天</strong><div class="progress"><i id="progress"></i></div></div></section>
+    <div class="section-head"><div><span class="label">DAILY SENTENCES</span><h2 id="dayHeading">今日五句</h2></div><span class="hint">点击卡片，查看英文译文与重点词汇</span></div>
     <section id="sentences" class="sentences" aria-live="polite"></section>
+    <section class="listening panel" aria-labelledby="listenTitle">
+      <div class="listen-head"><div><span class="label">LISTENING PRACTICE</span><h2 id="listenTitle">今日听力</h2></div><span class="level" id="audioLevel">CET-6+</span></div>
+      <div class="audio-meta"><h3 id="audioTitle"></h3><p id="audioDesc"></p><audio id="audioPlayer" controls preload="none"></audio><div class="listen-actions"><button id="transcriptToggle" class="transcript-button" aria-expanded="false">显示英文原文　＋</button><a id="audioSource" target="_blank" rel="noopener">打开素材来源 ↗</a></div><div id="transcript" class="transcript" hidden></div></div>
+    </section>
     <footer><span>句间 · 把好表达，变成自己的表达。</span><span id="updated">每日更新 · 06:00</span></footer>
   </main>
-  <script src="content.js"></script><script src="app.js"></script>
+  <script src="week.js"></script><script src="listening.js"></script><script src="app.js"></script>
 </body>
 </html>
+
