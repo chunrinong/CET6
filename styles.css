@@ -5,6 +5,11 @@
 /* Mobile refinements */
 html{-webkit-text-size-adjust:100%}
 body{overflow-wrap:anywhere}
+html,body{width:100%;max-width:100%;min-width:0;overflow-x:hidden}
+*,*::before,*::after{min-width:0}
+img,video,audio,iframe{max-width:100%}
+button,a,[role="button"]{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+button{cursor:pointer}
 @media(max-width:620px){
  .top{padding:0 15px;gap:10px}.brand{gap:8px}.brand small{font-size:8px;letter-spacing:1px;padding-left:8px}.top-right{gap:8px}.icon{flex:0 0 31px}
  main{padding:0 15px}.intro{padding:40px 0 25px}.overline{font-size:8px;letter-spacing:1.2px;line-height:1.8}.overline span:last-child{display:block;margin:4px 0 0 14px}.intro h1{font-size:clamp(27px,8vw,33px);line-height:1.45}.intro p{line-height:1.85}
@@ -16,4 +21,10 @@ body{overflow-wrap:anywhere}
  footer{font-size:8px;line-height:1.7;align-items:flex-start;flex-wrap:wrap}
 }
 @media(max-width:380px){main{padding:0 12px}.week-nav{gap:3px}.week-day small{font-size:6px}.week-day span{font-size:9px}.sentence{padding:13px 9px;gap:6px}.cn{font-size:13px}.hint{max-width:120px}.listen-actions{flex-direction:column}.listen-actions a{text-align:left}}
+@media(max-width:620px){
+ .top{width:100%;max-width:100%;height:60px;padding:0 12px}.brand{font-size:17px;white-space:nowrap}.brand small{font-size:7px}.top-right{margin-left:auto}
+ main{width:100%;max-width:100%;padding:0 13px}.intro h1{font-size:30px}.week-nav{width:100%;grid-template-columns:repeat(7,minmax(0,1fr))}.week-day{overflow:hidden}.topic-card{width:100%;grid-template-columns:24px minmax(0,1fr);gap:9px;padding:16px 12px}.topic-progress{width:100%}
+ .section-head{gap:8px}.section-head>div,.section-head .hint{min-width:0}.sentence{width:100%;grid-template-columns:20px minmax(0,1fr) 18px}.sentence .body{min-width:0}.cn,.en{overflow-wrap:anywhere;word-break:normal}.listening{width:100%;min-width:0}.audio-meta{min-width:0}.audio-meta audio{width:100%;min-width:0}.listen-actions{width:100%;flex-wrap:wrap}.transcript{max-width:100%;overflow:hidden}.transcript pre{white-space:pre-wrap;word-break:break-word}
+}
+.load-error{padding:18px;background:#fff3e6;color:#734b1d;border:1px solid #ead6b9;font:13px/1.7 var(--serif)}
 
